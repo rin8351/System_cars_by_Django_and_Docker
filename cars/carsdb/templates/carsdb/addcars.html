@@ -1,0 +1,23 @@
+{% extends "carsdb/base.html" %}
+
+{% block content %}
+
+<form method="POST" >
+    <div class="form-group">
+    {% csrf_token %}
+    <label class="signup-text-input">Name</label>
+    {{ form.name }}
+    <label class="signup-text-input">Margin</label><br>
+    <br>
+    {{ form.margin }}
+    <br>
+    <label class="signup-text-input"><br>Parts for one car</label><br>
+    {% for f in form.parts %}
+    <br>
+    <label class="custom-checkbox" name="checks[]">{{f.label}}: </label>{{ f }}<br>
+    {% endfor %}
+    </div>
+<button class="c-button" type="submit" >Submit</button>
+</form>
+
+{% endblock content %}

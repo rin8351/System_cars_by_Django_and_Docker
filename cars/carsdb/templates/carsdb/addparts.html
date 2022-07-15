@@ -1,0 +1,15 @@
+{% extends "carsdb/base.html" %}
+
+{% block content %}
+
+<form method="POST" >
+    <div class="form-group">
+    {% csrf_token %}
+    {% for f in form %}
+    <label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}<br>
+    <br>
+    {% endfor %}
+<button class="c-button" type="submit" >Submit</button>
+</form>
+
+{% endblock content %}

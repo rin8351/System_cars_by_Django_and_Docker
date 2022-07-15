@@ -1,0 +1,26 @@
+{% extends "carsdb/base.html" %}
+
+{% block content %}
+
+<h2>Table of accesories for cars</h2>
+
+<table class="table" cellpadding="1" cellspacing="1">
+    <thead>
+    <tr>
+        <th width="20">№ </th>
+        <th width="50">Name</th>
+        <th width="40">Part</th>
+    </tr>
+</thead>
+<tbody>
+    {% for p in acess %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.part }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock content %}
