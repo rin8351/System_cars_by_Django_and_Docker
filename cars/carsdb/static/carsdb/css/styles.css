@@ -6,7 +6,26 @@ html, body {
 	width: 100%;
 	color: #444;
 }
+.simple-little-table table {
+    border-collapse: collapse;
+}
 
+.simple-little-table th {
+    color: #ffebcd;
+    background: #3b4646;
+    cursor: pointer;
+}
+
+.simple-little-table td,
+.simple-little-table th {
+    height: 40px;
+    text-align: center;
+    border: 2px solid #846868;
+}
+
+.simple-little-table tbody tr:nth-child(even) {
+    background: #e3e3e3;
+}
 .table-content {
 	width: 100%;
 	min-height: 100%;
@@ -51,6 +70,7 @@ html, body {
 }
 .content-text h2 {font-size: 32px;}
 
+
 .form-label {
     display: inline-block;
     min-width: 150px;
@@ -72,8 +92,4 @@ html, body {
 	cursor: pointer;
 	margin: 20;
   }
-
-  input[type=text] {
-	padding:10px;
-	margin:20px 0;
-  }
+  
