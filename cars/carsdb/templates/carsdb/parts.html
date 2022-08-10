@@ -1,0 +1,35 @@
+{% extends "carsdb/base.html" %}
+
+{% block content %}
+
+<h2>Table of parts</h2>
+
+<table class="simple-little-table" cellpadding="1" cellspacing="1">
+    <thead>
+    <tr>
+        <th width="30">№ </th>
+        <th width="60">Type</th>
+        <th width="50">Price</th>
+        <th width="60">Model</th>
+        <th width="60">Count for one car</th>
+        <th width="60">Parametres</th>
+    </tr>
+</thead>
+<tbody>
+    {% for p in partsm %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ p.type }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.model_p }}</td>
+        <td>{{ p.count_p}}</td>
+        <td>{{ p.params }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+</body>
+</html
+
+{% endblock content %}
